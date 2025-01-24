@@ -87,15 +87,28 @@
 
     const bigCard = document.getElementById('cardpremiere');
     bigCard.innerHTML = `
-            <h2>${city}</h2>
-            <p>Coordonnées : ${lat.toFixed(2)}, ${lon.toFixed(2)}</p>
-            <p>Date : ${todayDateStr}</p>
-            <div class="icon">
-                <img src="${weatherIcon}" alt="Icône Météo" style="width:300px;">
-            </div>
-            <p>Température : ${todayTemperature} °C</p>
-            <p>Humidité : ${todayHumidity} %</p>
-            <p>Vitesse du vent : ${todayWindSpeed} m/s</p>
+            <div class="row"> <h2>${city}</h2></div>
+             <div class="row">
+              <div class="col"> 
+               <div class="icon p-0">
+                <img class="border" src="${weatherIcon}" alt="Icône Météo" style="width:200px;padding:0px">
+              </div>
+               
+              <div  class="col">
+             
+                    <p>Date : ${todayDateStr}</p>  
+                    <p>Température : ${todayTemperature} °C</p>
+                    <p>Humidité : ${todayHumidity} %</p>
+                    <p>Vitesse du vent : ${todayWindSpeed} m/s</p>
+               
+              </div>
+             </div>
+              <div>
+               
+              </div>
+             
+             </div>
+       
         `;
 
     const dates = data.data[0].coordinates[0].dates;
